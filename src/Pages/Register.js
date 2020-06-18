@@ -15,22 +15,29 @@ class Register extends Component {
 
   render() {
     const { username, email, city, country } = this.state;
+    {
+      console.log(this.state);
+    }
+
     return (
       <>
         <Row className="h-100 no-gutters">
-          <Col md={5} className="bg-register">
+          <Col md={7} className="bg-register">
             <div className="text w-100 h-100 ml-3 d-flex flex-column justify-content-between">
-              <div className="bg-text-login">
-                <h1 className="text">Click for your shoot</h1>
+              <div className="bg text-white mt-5 ">
+                <h1 className="text-center white">Click for your shoot</h1>
+                <h2 className="text-center font-italic">Photography</h2>
               </div>
             </div>
           </Col>
-          <Col md={7} className="h-100">
+          <Col md={5} className="h-100">
             <div className="content-login h-100">
               <div className="h-75 m-4 d-flex justify-content-center align-items-center">
                 <Form>
-                  <h1>Registration</h1>
-                  <p className="secondary">CLICK FOR YOUR SHOOT</p>
+                  <h1 className="font-weight-bolder mt-5 text-success">
+                    Registration
+                  </h1>
+                  <p className="text-center">CLICK FOR YOUR SHOOT</p>
                   <Form.Group>
                     <Form.Label>Username</Form.Label>
                     <Form.Control
@@ -71,6 +78,7 @@ class Register extends Component {
                     Cancel
                   </Button>
                   <Button
+                    className="bg-success ml-2 "
                     onClick={(e) =>
                       this.props.history.push("/detail", {
                         username,

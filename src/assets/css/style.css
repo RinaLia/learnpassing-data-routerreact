@@ -9,3 +9,7 @@ html, body, #root{
   background-image: url('../img/bg-register2.jpg');
   background-size: contain;
 }
+
+.nav{
+  background-color: springgreen
+}
